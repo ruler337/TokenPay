@@ -87,7 +87,7 @@ namespace TokenPay.BgServices
                             .AppendPathSegment($"api")
                             .SetQueryParams(query)
                             .WithClient(client)
-                            .WithTimeout(15);
+                            .WithTimeout(60);
                         var result = await req
                             .GetJsonAsync<BaseResponse<EthTransaction>>();
 
